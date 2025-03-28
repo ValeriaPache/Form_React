@@ -1,0 +1,62 @@
+.container{
+    width: 100%;
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerForm{
+    width: 50%;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputForm{
+    width: 80%;
+    height: 20px;
+}
+.texttareaForm{
+    width: 80%;
+    height: 60px;
+}
+.buttomForm{
+    background: rgb(9, 30, 100);
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+.secondContainer{
+    width: 50%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.containerButtomsFilter{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttomsFilter{
+    background: rgb(255, 255, 255);
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    border-color: rgb(123, 165, 165);   
+}
+.containerListTask{
+    background: white;
+    width: 80%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+}
