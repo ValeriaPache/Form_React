@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-
+import { useContext } from "react"
+import { contextTask } from "../../Context/Context"
 export const Form = () => {
-    const [tasks, setTasks] = useState([]);
-      const [title, setTitle] = useState("");
-      const [description, setDescription] = useState("");
+
+    const {title,setTitle,description,setDescription,tasks,setTasks} = useContext (contextTask)
     
-      const addTask = (e) => {
+    const addTask = (e) => {
         e.preventDefault();
     
         const newTask = {
@@ -17,6 +16,7 @@ export const Form = () => {
     
         setTasks([...tasks, newTask]);
       };
+
   return (
     <>
         <h1 className='Tittle'>To-Do List</h1>

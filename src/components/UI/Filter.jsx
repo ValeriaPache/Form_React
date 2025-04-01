@@ -1,23 +1,17 @@
-import React from 'react'
+import { useContext } from "react";
+import { contextTask } from "../../Context/Context";
+import { ButtonFilter } from "./ButtonFilter";
+import { TaskList } from "./TaskList";
 
 export const Filter = () => {
-  return (
-    
-        <div className='secondContainer'>
-        <div className='containerButtomsFilter'>
-          <button className='buttomsFilter'>All</button>
-          <button className='buttomsFilter'>Pending</button>
-          <button className='buttomsFilter'>Completed</button>
-        </div>
+    const { tasks } = useContext(contextTask); // Obtén las tareas del contexto
 
-       {/*{tasks.map(task => (*/}
-          <div /*key={task.id}*/ className='containerListTask'>
-            <input type='checkbox'></input>
-            <h3 className='titleListTask'>{/*{task.title}*/}</h3>
-            <p className='textListTask'>{/*{task.description}*/}</p>
-          </div>
-        {/* ))} */}
+    return (
+      <div className='secondContainer'>
+        <ButtonFilter />
+          {tasks.map(task => (
+            <TaskList key={task.id} task={task} />
+          ))}
       </div>
-    
-  )
-}
+    );
+};
